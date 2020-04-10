@@ -21,16 +21,14 @@ const config = {
       'transform-class-properties',
       'transform-object-rest-spread',
       ['transform-runtime', {
-          helpers: false,
-          polyfill: false,
-          regenerator: true,
-          moduleName: 'babel-runtime'
-        }
-      ]
+        helpers: false,
+        polyfill: false,
+        regenerator: true,
+        moduleName: 'babel-runtime'
+      }]
     ]
   },
-  defineConstants: {
-  },
+  defineConstants: {},
   mini: {
     postcss: {
       autoprefixer: {
@@ -85,7 +83,7 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    }
+    },
   }
 }
 

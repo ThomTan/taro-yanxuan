@@ -1,7 +1,7 @@
 const path = require('path')
 
 // NOTE 在 sass 中通过别名（@ 或 ~）引用需要指定路径
-const sassImporter = function(url) {
+const sassImporter = function (url) {
   if (url[0] === '~' && url[1] !== '/') {
     return {
       file: path.resolve(__dirname, '..', 'node_modules', url.substr(1))
@@ -43,8 +43,7 @@ const config = {
       importer: sassImporter
     }
   },
-  defineConstants: {
-  },
+  defineConstants: {},
   alias: {
     '@actions': path.resolve(__dirname, '..', 'src/actions'),
     '@assets': path.resolve(__dirname, '..', 'src/assets'),
@@ -55,10 +54,8 @@ const config = {
     '@utils': path.resolve(__dirname, '..', 'src/utils')
   },
   copy: {
-    patterns: [
-    ],
-    options: {
-    }
+    patterns: [],
+    options: {}
   },
   weapp: {
     module: {
@@ -97,6 +94,9 @@ const config = {
   },
   h5: {
     // NOTE H5 打包静态资源时带 hash 值，方便缓存、版本管理
+    devServer: {
+      port: 10087,
+    },
     publicPath: '/',
     staticDirectory: 'static',
     output: {

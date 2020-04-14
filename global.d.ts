@@ -8,6 +8,8 @@ declare module "*.less";
 declare module "*.scss";
 declare module "*.sass";
 declare module "*.styl";
+declare const HOST: string;
+declare const HOST_M: string;
 
 // @ts-ignore
 declare const process: {

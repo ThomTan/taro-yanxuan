@@ -1,6 +1,6 @@
 // NOTE H5 段使用 devServer 实现跨域，需要修改 package.json 的运行命令，加入环境变量
 const isH5 = process.env.CLIENT_ENV === 'h5'
-const HOST = '"https//miniapp.you.163.com"'
+const HOST = '"https://miniapp.you.163.com"'
 const HOST = '"https://m.you.163.com"'
 
 module.exports = {
